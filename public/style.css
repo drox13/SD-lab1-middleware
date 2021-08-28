@@ -6,8 +6,11 @@
     padding: 0;
 }
 
-h2 {
+body {
     font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
     font-weight: 500;
     font-size: 22px;
     color: #edf0f1;
@@ -37,13 +40,80 @@ header {
     background-color: rgba(0, 136, 169, 0.8);
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    align-items: center;
+}
+
+.card {
+    background-color: seashell;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    display: 1.5rem;
+    overflow: hidden;
+    width: 30rem;
+    height: 13rem;
+    margin: 10rem;
+}
+
+.card h2, h4{
+    opacity: 0.5;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+
+.left-side-card {
+    background-color: rgba(0, 136, 169, 1);
+    color: #edf0f1;
+    padding: 2rem;
+    width: 13rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right-side-card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.left-side-card i {
+    font-size: 5rem;
+}
+
+
+.btn_refresh {
+    background-color: rgba(0, 136, 169, 1);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+    color: #edf0f1;
+    padding: .2rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    align-self: flex-end;
+}
+
+.btn_refresh:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
 footer {
     width: 100%;
     position: absolute;
     bottom: 0;
-    background-color: #edf0f1;
-    padding: 50px 0 30px;
-    border-top-left-radius: 125px;
+    background-color: #24252a;
+    padding: 25px 0 30px;
+    border-top-right-radius: 120px;
+    color: #edf0f1;
 }
 
 .row {
@@ -68,7 +138,7 @@ footer {
 hr {
     width: 90%;
     border: 0;
-    border-bottom: 1px solid #24252a;
+    border-bottom: 1px solid #edf0f1;
     margin: 20px auto;
 }
 
