@@ -8,16 +8,16 @@ function writeLogs() {
 	setInterval(() => {
 		//shell.exec('/home/lab1/SD-lab1/bash/ping.sh');
 		//prueba Brayan
-		shell.exec('/home/andres/Documentos/Sistemas distribuidos/lab1/SD-lab1-middleware/ping.sh');
+		shell.exec('/home/andres/Documentos/Sistemas-distribuidos/lab1/SD-lab1-middleware/ping.sh');
 	}, 1000);
 }
 
 function readLogServer1() {
 	setInterval(() => {
 		try {
-			myServer1 = fs.readFileSync('/home/andres/Documentos/Sistemas distribuidos/lab1/SD-lab1-middleware/dataLogs/lastLogServer1.log', 'utf8');
+			myServer1 = fs.readFileSync('/home/andres/Documentos/Sistemas-distribuidos/lab1/SD-lab1-middleware/dataLogs/lastLogServer1.log', 'utf8');
 			//checkStatusServerOne();
-			console.log(myServer1);
+			//console.log(myServer1);
 		} catch (err) {
 			console.error(err);
 		}
@@ -27,9 +27,9 @@ function readLogServer1() {
 function readLogServer2() {
 	setInterval(() => {
 		try {
-			myServer2 = fs.readFileSync('/home/andres/Documentos/Sistemas distribuidos/lab1/SD-lab1-middleware/dataLogs/lastLogServer2.log', 'utf8');
+			myServer2 = fs.readFileSync('/home/andres/Documentos/Sistemas-distribuidos/lab1/SD-lab1-middleware/dataLogs/lastLogServer2.log', 'utf8');
 			//checkStatusServerTwo();
-			console.log(myServer2);
+			//console.log(myServer2);
 		} catch (err) {
 			console.error(err);
 		}
@@ -37,8 +37,11 @@ function readLogServer2() {
 }
 
 const getLogs = (req, res) => {
-	res.status(200).json({
-		msg:'Mensaje recibido'
+	const myReq = req.body;
+	console.log(myReq);
+	res.json({
+		status_s1:myServer1,
+		status_s2:myServer2
 	})
 };
 

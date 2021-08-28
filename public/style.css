@@ -45,6 +45,7 @@ header {
     justify-content: center;
     height: 50vh;
     align-items: center;
+    padding: 3rem;
 }
 
 .card {
@@ -69,11 +70,15 @@ header {
     background-color: rgba(0, 136, 169, 1);
     color: #edf0f1;
     padding: 2rem;
-    width: 13rem;
+    width: 12rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+}
+
+.left-side-card i {
+    font-size: 5rem;
 }
 
 .right-side-card {
@@ -84,12 +89,26 @@ header {
     justify-content: space-between;
 }
 
-.left-side-card i {
-    font-size: 5rem;
+
+
+.btn_restart {
+    background-color: rgba(0, 136, 169, 1);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+    color: #edf0f1;
+    padding: .2rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    align-self: flex-end;
 }
 
+.btn_restart:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
 
-.btn_refresh {
+.btn_refresh{
     background-color: rgba(0, 136, 169, 1);
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
     font-size: 1.2rem;
@@ -112,7 +131,6 @@ footer {
     bottom: 0;
     background-color: #24252a;
     padding: 25px 0 30px;
-    border-top-right-radius: 120px;
     color: #edf0f1;
 }
 

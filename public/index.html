@@ -23,8 +23,8 @@
     
             <div class="right-side-card">
                 <h4>Status :</h4>
-                <h5>Lorem ipsum dolor sit amet consectetur.</h5>
-                <button class="btn_refresh">Refresh</button>
+                <h5 id="containerServer1">Lorem ipsum dolor sit amet consectetur.</h5>
+                <button class="btn_restart" disabled="true">Restart</button>
             </div>
         </div>
 
@@ -36,10 +36,12 @@
     
             <div class="right-side-card">
                 <h4>Status :</h4>
-                <h5>Lorem ipsum dolor sit amet consectetur.</h5>
-                <button class="btn_refresh">Refresh</button>
+                <h5 id="containerServer2">Lorem ipsum dolor sit amet consectetur.</h5>
+                <button class="btn_restart">Restart</button>
             </div>
         </div>
+        <button class="btn_refresh" id="btnRefresh" onclick="refreshPage()">Refresh page</button>
+        <script type="text/javascript" src="./client.js"></script>
     </div>
 
     <footer>
@@ -55,7 +57,7 @@
             </ul>
         </div>
         <hr>
-        <p class="copyright">Sistemas Distribuidos - Laboratorio 1 <span>&copy;</span> - All right reserved</p>
+        <p class="copyright">Sistemas Distribuidos - Laboratorio 1 - All right reserved<span>&copy;</span> </p>
     </footer>
 </body>
 </html>

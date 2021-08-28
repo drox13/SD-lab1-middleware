@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const PORT = 8000;
 
 class Server {
@@ -12,6 +13,9 @@ class Server {
 	}
 
 	middleware() {
+
+		this.app.use(cors());
+
 		this.app.use(express.static('public'));
 	}
 
