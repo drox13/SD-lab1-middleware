@@ -1,0 +1,1 @@
+docker exec instancia1 bash -c "pm2 stop index.js"

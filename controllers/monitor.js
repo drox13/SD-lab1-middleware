@@ -4,18 +4,20 @@ const fs = require('fs');
 var myServer1 = '';
 var myServer2 = '';
 
+const PATH = process.cwd();
+
 function writeLogs() {
 	setInterval(() => {
 		//shell.exec('/home/lab1/SD-lab1/bash/ping.sh');
 		//prueba Brayan
-		shell.exec('/home/andres/Documentos/Sistemas-distribuidos/lab1/SD-lab1-middleware/ping.sh');
+		shell.exec(PATH + '/ping.sh');
 	}, 1000);
 }
 
 function readLogServer1() {
 	setInterval(() => {
 		try {
-			myServer1 = fs.readFileSync('/home/andres/Documentos/Sistemas-distribuidos/lab1/SD-lab1-middleware/dataLogs/lastLogServer1.log', 'utf8');
+			myServer1 = fs.readFileSync(PATH + '/dataLogs/lastLogServer1.log', 'utf8');
 			//checkStatusServerOne();
 			//console.log(myServer1);
 		} catch (err) {
@@ -27,7 +29,7 @@ function readLogServer1() {
 function readLogServer2() {
 	setInterval(() => {
 		try {
-			myServer2 = fs.readFileSync('/home/andres/Documentos/Sistemas-distribuidos/lab1/SD-lab1-middleware/dataLogs/lastLogServer2.log', 'utf8');
+			myServer2 = fs.readFileSync(PATH + '/dataLogs/lastLogServer2.log', 'utf8');
 			//checkStatusServerTwo();
 			//console.log(myServer2);
 		} catch (err) {
