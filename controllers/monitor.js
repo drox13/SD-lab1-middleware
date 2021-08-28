@@ -15,10 +15,8 @@ function writeLogs() {
 function readLogServer1() {
 	setInterval(() => {
 		try {
-			myServer1 = fs.readFileSync('/home/lab1/SD-lab1/Milldware/lastLogServer1.log', 'utf8');
-			//Ruta DRO
-			//myServer = fs.readFileSync(path, 'utf8');
-			checkStatusServerOne();
+			myServer1 = fs.readFileSync('/home/andres/Documentos/Sistemas distribuidos/lab1/SD-lab1-middleware/dataLogs/lastLogServer1.log', 'utf8');
+			//checkStatusServerOne();
 			console.log(myServer1);
 		} catch (err) {
 			console.error(err);
@@ -29,10 +27,8 @@ function readLogServer1() {
 function readLogServer2() {
 	setInterval(() => {
 		try {
-			myServer2 = fs.readFileSync('/home/lab1/SD-lab1/Milldware/lastLogServer2.log', 'utf8');
-			//Ruta DRO
-			//myServer = fs.readFileSync(path, 'utf8');
-			checkStatusServerTwo();
+			myServer2 = fs.readFileSync('/home/andres/Documentos/Sistemas distribuidos/lab1/SD-lab1-middleware/dataLogs/lastLogServer2.log', 'utf8');
+			//checkStatusServerTwo();
 			console.log(myServer2);
 		} catch (err) {
 			console.error(err);
@@ -70,8 +66,8 @@ const getLogs = (req, res) => {
 // 	}
 // };
 
-// writeLogs();
-// readLogServer1();
-// readLogServer2();
+writeLogs();
+readLogServer1();
+readLogServer2();
 
  module.exports = getLogs

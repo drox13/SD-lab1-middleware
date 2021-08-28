@@ -7,7 +7,12 @@ last_server2_ping=$(curl -s -o /dev/null -w '%{http_code}' 172.17.0.3:8000/statu
 history_server1_ping=$(curl -s -o /dev/null -w '%{http_code}' 172.17.0.2:8000/status)
 history_server2_ping=$(curl -s -o /dev/null -w '%{http_code}' 172.17.0.3:8000/status)
 
-echo "$last_server1_ping $current_date" > /home/lab1/SD-lab1/Milldware/lastLogServer1.log
-echo "$last_server2_ping $current_date" > /home/lab1/SD-lab1/Milldware/lastLogServer2.log
-echo "$history_server1_ping $current_date" >> /home/lab1/SD-lab1/Milldware/historyServer1.log
-echo "$history_server2_ping $current_date" >> /home/lab1/SD-lab1/Milldware/historyServer2.log
+# echo "$last_server1_ping $current_date" > /home/lab1/SD-lab1/Milldware/lastLogServer1.log
+# echo "$last_server2_ping $current_date" > /home/lab1/SD-lab1/Milldware/lastLogServer2.log
+# echo "$history_server1_ping $current_date" >> /home/lab1/SD-lab1/Milldware/historyServer1.log
+# echo "$history_server2_ping $current_date" >> /home/lab1/SD-lab1/Milldware/historyServer2.log
+
+echo "$last_server1_ping $current_date" > /home/andres/Documentos/Sistemas distribuidos/lab1/SD-lab1-middleware/dataLogs/lastLogServer1.log
+echo "$last_server2_ping $current_date" > /home/andres/Documentos/Sistemas distribuidos/lab1/SD-lab1-middleware/dataLogs/lastLogServer2.log
+echo "$history_server1_ping $current_date" >> /home/andres/Documentos/Sistemas distribuidos/lab1/SD-lab1-middleware/dataLogs/historyServer1.log
+echo "$history_server2_ping $current_date" >> /home/andres/Documentos/Sistemas distribuidos/lab1/SD-lab1-middleware/dataLogs/historyServer2.log
