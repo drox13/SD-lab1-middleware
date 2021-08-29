@@ -24,7 +24,7 @@
             <div class="right-side-card">
                 <h4>Status :</h4>
                 <h5 id="containerServer1">Lorem ipsum dolor sit amet consectetur.</h5>
-                <button class="btn_restart" disabled="true">Restart</button>
+                <button class="btn_restart" id="btnRestartServer1" onclick="sendScriptToRestartServer1()" disabled="disabled">Restart</button>
             </div>
         </div>
 
@@ -37,7 +37,7 @@
             <div class="right-side-card">
                 <h4>Status :</h4>
                 <h5 id="containerServer2">Lorem ipsum dolor sit amet consectetur.</h5>
-                <button class="btn_restart">Restart</button>
+                <button class="btn_restart" id="btnRestartServer2" onclick="sendScriptToRestartServer2()" disabled="disabled">Restart</button>
             </div>
         </div>
         <button class="btn_refresh" id="btnRefresh" onclick="refreshPage()">Refresh page</button>
