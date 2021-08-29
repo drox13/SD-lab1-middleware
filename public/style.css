@@ -57,7 +57,7 @@ header {
     overflow: hidden;
     width: 30rem;
     height: 13rem;
-    margin: 10rem;
+    margin: 8rem;
 }
 
 .card h2, h4{
@@ -70,7 +70,7 @@ header {
     background-color: rgba(0, 136, 169, 1);
     color: #edf0f1;
     padding: 2rem;
-    width: 12rem;
+    width: 15rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,8 +88,6 @@ header {
     align-items: flex-start;
     justify-content: space-between;
 }
-
-
 
 .btn_restart {
     background-color: #ff0000;;
@@ -126,43 +124,73 @@ header {
 }
 
 footer {
-    width: 100%;
+    clear: both;
     position: absolute;
     bottom: 0;
+    width: 100%;
     background-color: #24252a;
-    padding: 25px 0 30px;
+    padding-top: 20px;
+    padding-bottom: 5px;
     color: #edf0f1;
 }
 
-.row {
-    width: 85%;
-    margin: auto;
+.footer-content {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
 
-.col {
-    flex-basis: 25%;
-    padding: 10px;
+.footer-content h4 {
+    font-size: 1rem;
+    text-transform: capitalize;
+    line-height: 2rem;
 }
 
-.logo {
-    width: 150px;
-    margin-bottom: 15px;
+.footer-content h6 {
+    font-size: .7rem;
+    text-transform: capitalize;
+    line-height: 1rem;
+    padding-bottom: .5rem;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 1.5rem 0;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.socials a i {
+    font-size: 1.5rem;
+    transition: color .2s ease;
+}
+
+.socials a:hover i {
+    color: rgba(0, 136, 169, 1);
 }
 
 hr {
     width: 90%;
     border: 0;
     border-bottom: 1px solid #edf0f1;
-    margin: 20px auto;
+    margin: 10px auto;
 }
 
 .copyright {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 14px;
 }
