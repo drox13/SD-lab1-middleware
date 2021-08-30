@@ -16,20 +16,20 @@ btnRestartServer2.disabled = true;
 function changeValuesBtnServer1() {
     if (checkStatusServerOne() !== '200') {
         btnRestartServer1.disabled = false;
-        btnRestartServer1.style.backgroundColor = 'rgba(0, 136, 169, 1)';
+        btnRestartServer1.style.backgroundColor = '#ff0000';
     } else {
         btnRestartServer1.disabled = true;
-        btnRestartServer1.style.backgroundColor = '#ff0000';
+        btnRestartServer1.style.backgroundColor = '#caccd1';
     }
 }
 
 function changeValuesBtnServer2() {
     if (checkStatusServerTwo() !== '200') {
         btnRestartServer2.disabled = false;
-        btnRestartServer2.style.backgroundColor = 'rgba(0, 136, 169, 1)';
+        btnRestartServer2.style.backgroundColor = '#ff0000';
     } else {
         btnRestartServer2.disabled = true;
-        btnRestartServer2.style.backgroundColor = '#ff0000';
+        btnRestartServer2.style.backgroundColor = '#caccd1';
     }
 }
 
