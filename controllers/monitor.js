@@ -42,8 +42,9 @@ const postLogs = (req, res) => {
 };
 
 const postRestart = (req, res) => {
-	const myReq = req.body;
-	console.log('restart server...', myReq);
+	const msg = req.body;
+	console.log(msg)
+	//shell.exec(PATH + `restartInstancia${myReq}.sh`);
 	res.json({
 		msg:'Restarting Server...'
 	})

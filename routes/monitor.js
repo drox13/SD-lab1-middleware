@@ -5,6 +5,6 @@ const router = Router();
 
 router.post('/', postLogs);
 
-router.post('/restart', postRestart);
+router.put('/restart', postRestart);
 
 module.exports = router;

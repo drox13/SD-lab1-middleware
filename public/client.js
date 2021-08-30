@@ -1,6 +1,7 @@
 //onst shell = require('shelljs');
 const obj = {msg:'getStatus'};
 
+
 let statusServer1 = '';
 let statusServer2 = '';
 let btnRestartServer1 = document.querySelector('#btnRestartServer1');
@@ -75,24 +76,19 @@ function refreshPage(){
 
 function sendScriptToRestartServer1(){
     //shell.exec();
+    const xhr = new XMLHttpRequest();
+    xhr.open('PUT', 'http://localhost:8000/restart',true);
+    xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+    alert(btnRestartServer2.getAttribute('id'));
+    let data = {msg: btnRestartServer1.getAttribute('id')};
+    xhr.send(JSON.stringify(data));
     console.log('Enviando script #1...');
-    fetch('/restart', options)
-    .then((response) => {
-        return response.json();
-    })
-    .then((jsonResponse) => {
-        message = jsonResponse.msg;
-        alert(message, 'Restarting server...');
-    })
-    // `<h5>${statusServer2}</h5>`
-    .catch((error) => {
-        console.log(error);
-    });
 }
 
 function sendScriptToRestartServer2(){
     //shell.exec();
     console.log('Enviando script #2..');
+    obj = 
     fetch('/restart', options)
     .then((response) => {
         return response.json();
