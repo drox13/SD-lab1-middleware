@@ -5,6 +5,7 @@ window.onload = function() {
     let btn1ID = btnRestartServer1.getAttribute('id')
     let btn2ID = btnRestartServer2.getAttribute('id')
     btnRestartServer1.addEventListener("click", wakeUpServer1)
+    btnRestartServer2.addEventListener("click", wakeUpServer2)
     btnRestartServer1.style.display = "none";
     btnRestartServer2.style.display = "none";
 }
@@ -39,17 +40,17 @@ function changeValuesBtnServer1() {
         btnRestartServer1.style.display = "block";
         btnRestartServer1.style.backgroundColor = 'rgba(0, 136, 169, 1)';
     } else {
-        btnRestartServer2.style.display = "block";
+        btnRestartServer1.style.display = "none";
         btnRestartServer1.style.backgroundColor = '#ff0000';
     }
 }
 
 function changeValuesBtnServer2() {
     if (checkStatusServerTwo() !== '200') {
-        btnRestartServer2.disabled = false;
+        btnRestartServer2.style.display = "block";
         btnRestartServer2.style.backgroundColor = 'rgba(0, 136, 169, 1)';
     } else {
-        btnRestartServer2.disabled = true;
+        btnRestartServer2.style.display = "none";
         btnRestartServer2.style.backgroundColor = '#ff0000';
     }
 }

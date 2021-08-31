@@ -42,12 +42,14 @@ const postLogs = (req, res) => {
 };
 
 const postRestart = (req, res) => {
-	if(req.body.button == 'btnRestartServer2') {
-		console.log('client asked foor server ')
+	console.log(req.body.button)
+	if(req.body.button == 'btnRestartServer1') {
+		//restart server 1 by bash
 	} else {
-
+		//restart server 1 by bash
 	}
-};
+}
+
 
 writeLogs();
 readLogServer1();
