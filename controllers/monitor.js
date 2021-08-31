@@ -42,12 +42,11 @@ const postLogs = (req, res) => {
 };
 
 const postRestart = (req, res) => {
-	const msg = req.body;
-	console.log(msg)
-	//shell.exec(PATH + `restartInstancia${myReq}.sh`);
-	res.json({
-		msg:'Restarting Server...'
-	})
+	if(req.body.button == 'btnRestartServer2') {
+		console.log('client asked foor server ')
+	} else {
+
+	}
 };
 
 writeLogs();

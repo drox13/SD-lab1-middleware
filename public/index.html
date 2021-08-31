@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="./client.js" async></script>
     <title>Laboratorio 1</title>
 </head>
 <body>
@@ -24,7 +25,7 @@
             <div class="right-side-card">
                 <h4>Status :</h4>
                 <h5 id="containerServer1"></h5>
-                <button class="btn_restart" id="btnRestartServer1" onclick="sendScriptToRestartServer1()" disabled="disabled">Restart</button>
+                <button type = "submit" class= "btn_restart" id="btnRestartServer1">Restart S1</button>
             </div>
         </div>
 
@@ -37,11 +38,10 @@
             <div class="right-side-card">
                 <h4>Status :</h4>
                 <h5 id="containerServer2"></h5>
-                <button class="btn_restart" id="btnRestartServer2" onclick="sendScriptToRestartServer2()" disabled="disabled">Restart</button>
+                <button type = "submit" class = "btn_restart" id="btnRestartServer2">Restart S2</button>
             </div>
         </div>
         <button class="btn_refresh" id="btnRefresh" onclick="refreshPage()">Refresh page</button>
-        <script type="text/javascript" src="./client.js"></script>
     </div>
 
     <footer>
