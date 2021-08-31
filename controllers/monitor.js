@@ -34,7 +34,6 @@ function readLogServer2() {
 
 const postLogs = (req, res) => {
 	const myReq = req.body;
-	console.log(myReq);
 	res.json({
 		status_s1:myServer1,
 		status_s2:myServer2
@@ -44,9 +43,19 @@ const postLogs = (req, res) => {
 const postRestart = (req, res) => {
 	console.log(req.body.button)
 	if(req.body.button == 'btnRestartServer1') {
-		//restart server 1 by bash
+		shell.exec(PATH + '/restartInstancia1.sh');
+		res.json({
+			status_s1:myServer1,
+			status_s2:myServer2
+		})
+	} else if (req.body.button == 'btnRestartServer2'){
+		shell.exec(PATH + '/restartInstancia2.sh');
+		res.json({
+			status_s1:myServer1,
+			status_s2:myServer2
+		})
 	} else {
-		//restart server 1 by bash
+		res.send('Error');
 	}
 }
 
